@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap Dashboard V2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body class="admin">
+
+    <!-- Start of top NAV-->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top ">
+
+
+        <div class="navbar-toggler-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+            <a class="navbar-brand" href="#">
+                <img src="img/admin.svg" width="25" height="25" class="d-inline-block align-top" alt="">
+                <span class="">Bootstrap DB </span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav justify-content-end w-100">
+            <li class="nav-item">
+              <a class="nav-link" href="../../homepage/layout/" target="_blank">Visit Site <i class="fa fa-external-link" aria-hidden="true"></i> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">File Manager</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Post Manager</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Users</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="#">Pages</a>
+              </li>
+            <li class="nav-item float-lg-right ">
+              <a href="" class="nav-link "><i class="fa fa-bell text-warning" aria-hidden="true"></i> <span class="badge-pill badge-danger text-light">3</span></a>
+            </li>
+            <li class="nav-item dropdown user">
+              <a class="nav-link dropdown-toggle" href="#" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/adminIcon.png" width="25" height="25" alt="" class="rounded-circle"> Hello, Admin!</a>
+              <div class="dropdown-menu" aria-labelledby="responsiveNavbarDropdown">
+                <a class="dropdown-item" href="#">Edit My Profile</a>
+                <a class="dropdown-item" href="#">Log Out</a>
+                <a class="dropdown-item" href="#">Help</a>
+              </div>
+            </li>
+            </ul>
+            </div>
+    </nav>
+
+    <!-- END of top NAV -->
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <!-- SIDEBAR -->
+        <div class="col-lg-2 sidebar">
+
+          <!-- sidebar nav -->
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"><i class="fa fa-tachometer-alt" aria-hidden="true"></i> Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> Users</a>
+            </li>
+            <li class="nav-item dropdown dropdown-tree btn-group">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-image" aria-hidden="true"></i> File Manager</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">All Files</a>
+                <a class="dropdown-item" href="#">Add New File</a>
+                <a class="dropdown-item" href="#">Edit File</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-tree btn-group">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file" aria-hidden="true"></i> Pages</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">All Files</a>
+                <a class="dropdown-item" href="#">Add New File</a>
+                <a class="dropdown-item" href="#">Edit File</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-tree btn-group">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-thumbtack" aria-hidden="true"></i> Posts</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">All Posts</a>
+                <a class="dropdown-item" href="#">Add New Post</a>
+                <a class="dropdown-item" href="#">Edit Post</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a>
+            </li>
+          </ul>
+          <!-- end of sidebar nav -->
+
+          </div>
+          <!-- END of SIDEBAR -->
+
+        <!-- MAIN CONTENT -->
+        <div class="col main">
+          <!-- ALERT -->
+          <h2>Dashboard<small> - Good morning Admin</small></h2>
+          <div class="alert alert-warning" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Update</strong> You have three unpublshed drafts. <a href="#">Edit</a>
+          </div>
+          <!-- END OF ALERT -->
+
+          <!-- Cards Charts -->
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Views</h4>
+                  <canvas id="chartLine"></canvas>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Visits</h4>
+                  <canvas id="chartBar" ></canvas>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Content</h4>
+                  <canvas id="chartPie"></canvas>
+                </div>
+              </div>
+            </div>
+          <!-- END OF CARDS -->
+
+          <!-- Content Table -->
+          <div class="card mt-3">
+            <div class="card-body">
+              <h4>Recent Activity</h4>
+              <table class="table table-responsive d-md-table">
+                <thead>
+                  <tr>
+                    <th colspan="2">Title</th>
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-faded">
+                    <td scope="row">1</td>
+                    <td>Life's too short to hang out with people who aren't resourceful.  </td>
+                    <td>Jeff Bezos</td>
+                    <td>12/01/54</td>
+                    <td>Draft</td>
+                    <td class="no-wrap"><a href=""><i class="fa fa-edit pr-1"></i>Edit</a> | <a href=""><i class="fa fa-trash pr-1"></i>Delete</a></td>
+                  </tr>
+                  <tr>
+                    <td scope="row">2</td>
+                    <td>Your most unhappy customers are your greatest source of learning.</td>
+                    <td>Bill Gates</td>
+                    <td>28/10/55</td>
+                    <td>Post</td>
+                    <td><a href=""><i class="fa fa-edit pr-1"></i>Edit</a> | <a href=""><i class="fa fa-trash pr-1"></i>Delete</a></td>
+                  </tr>
+                  <tr>
+                    <td scope="row">3</td>
+                    <td>The biggest risk is not taking any risk ... In a world that's changing really quickly, the only strategy that is guaranteed to fail is not taking risks.</td>
+                    <td>Mark Zuckerberg</td>
+                    <td>14/05/84</td>
+                    <td>Post</td>
+                    <td><a href=""><i class="fa fa-edit pr-1"></i>Edit</a> | <a href=""><i class="fa fa-trash pr-1"></i>Delete</a></td>
+                  </tr>
+                  <tr>
+                    <td scope="row">4</td>
+                    <td>I believe people have to follow their dreams - I did.</td>
+                    <td>Larry Ellison</td>
+                    <td>17/08/44</td>
+                    <td>Post</td>
+                    <td><a href=""><i class="fa fa-edit pr-1"></i>Edit</a> | <a href=""><i class="fa fa-trash pr-1"></i>Delete</a></td>
+                  </tr>
+                  <tr>
+                    <td scope="row">5</td>
+                    <td>About Us</td>
+                    <td>John Rockfeller</td>
+                    <td>08/07/39</td>
+                    <td>Page</td>
+                    <td><a href=""><i class="fa fa-edit pr-1"></i>Edit</a> | <a href=""><i class="fa fa-trash pr-1"></i>Delete</a></td>
+                  </tr>
+                  <tr>
+                    <td scope="row">6</td>
+                    <td>Services</td>
+                    <td>J P Morgan</td>
+                    <td>17/04/37</td>
+                    <td>Page</td>
+                    <td><a href=""><i class="fa fa-edit pr-1"></i>Edit</a> | <a href=""><i class="fa fa-trash pr-1"></i>Delete</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- END of TABLES -->
+
+          <!-- FOOTER -->
+          <footer class="footer py-3">
+            <div class="container-fluid">
+               <a href="github.com/vstrog">Bootstrap DB</a>
+            </div>
+          </footer>
+          <!--END OF FOOTER -->
+
+        </div>
+
+      </div>
+
+    </div>
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
